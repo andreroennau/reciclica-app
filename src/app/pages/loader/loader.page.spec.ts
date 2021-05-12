@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
-
 import { LoaderPage } from './loader.page';
 
 describe('LoaderPage', () => {
@@ -15,10 +14,6 @@ describe('LoaderPage', () => {
 
     fixture = TestBed.createComponent(LoaderPage);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   }));
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });
