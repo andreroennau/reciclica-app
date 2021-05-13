@@ -15,10 +15,6 @@ describe('PickupCallsPage', () => {
 
     fixture = TestBed.createComponent(PickupCallsPage);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   }));
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });
