@@ -2,7 +2,6 @@ import { ComponentFixture, fakeAsync, TestBed, tick, waitForAsync } from '@angul
 import { Router } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { AppRoutingModule } from 'src/app/app-routing.module';
-
 import { LoaderPage } from './loader.page';
 
 describe('LoaderPage', () => {

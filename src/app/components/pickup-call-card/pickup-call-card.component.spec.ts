@@ -16,5 +16,4 @@ describe('PickupCallCardComponent', () => {
     fixture = TestBed.createComponent(PickupCallCardComponent);
     component = fixture.componentInstance;
   }));
-
 });
