@@ -23,6 +23,7 @@ describe('LoginPage', () => {
   let page;
   let store: Store<AppState>;
   let toastController: ToastController;
+  let authService: AuthService;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -42,6 +43,7 @@ describe('LoginPage', () => {
     router = TestBed.get(Router);
     store = TestBed.get(Store);
     toastController = TestBed.get(ToastController);
+    authService = TestBed.get(AuthService);
 
     component = fixture.componentInstance;
     page = fixture.debugElement.nativeElement;
@@ -51,14 +53,6 @@ describe('LoginPage', () => {
     component.ngOnInit();
 
     expect(component.form).not.toBeUndefined();
-  })
-
-  it('should go to home page on login', () => {
-    spyOn(router, 'navigate');
-
-    component.login();
-
-    expect(router.navigate).toHaveBeenCalledWith(['home']);
   })
 
   it('should go to register page on register', () => {
@@ -84,7 +78,7 @@ describe('LoginPage', () => {
   })
 
   it('should hide loading and show success message when has recovered password', () => {
-    spyOn(toastController, 'create');
+    spyOn(toastController, 'create').and.returnValue(<any> Promise.resolve({present: () => {}}));
 
     fixture.detectChanges();
     store.dispatch(recoverPassword());
@@ -97,7 +91,7 @@ describe('LoginPage', () => {
   })
 
   it('should hide loading and show error message when error on recover password', () => {
-    spyOn(toastController, 'create');
+    spyOn(toastController, 'create').and.returnValue(<any> Promise.resolve({present: () => {}}));
     
     fixture.detectChanges();
     store.dispatch(recoverPassword());

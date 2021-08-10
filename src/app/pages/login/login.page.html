@@ -22,7 +22,7 @@
           
           <ion-button color="dark" fill="clear" size="full" [disabled]="!form.get('email').valid"
             (click)="forgotEmailPassword()" id="recoverPasswordButton">Forgot email/password</ion-button>
-          <ion-button color="success" size="full" [disabled]="!form.valid" (click)="login()">Login</ion-button>
+          <ion-button color="success" size="full" [disabled]="!form.valid" (click)="login()" id="loginButton">Login</ion-button>
           <ion-button color="success" fill="clear" size="full" (click)="register()">Register</ion-button>
         </ion-card-content>
       </ion-card>
