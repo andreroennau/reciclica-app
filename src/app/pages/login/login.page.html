@@ -9,7 +9,7 @@
         <ion-card-content>
           <ion-item>
             <ion-label position="floating">Email</ion-label>
-            <ion-input type="email" formControlName="email"></ion-input>
+            <ion-input type="email" formControlName="email" aria-autocomplete="none" autocomplete="false"></ion-input>
           </ion-item>
           <app-error-message [field]="form.get('email')" error="required" message="Email is mandatory"></app-error-message>
           <app-error-message [field]="form.get('email')" error="email" message="Email is invalid"></app-error-message>
