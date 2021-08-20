@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "~11.2.0",
     "@angular/router": "~11.2.0",
     "@ionic/angular": "^5.5.2",
+    "@ngrx/effects": "^12.4.0",
     "@ngrx/store": "^11.0.1",
     "@ngrx/store-devtools": "^12.1.0",
     "firebase": "^8.9.0",
